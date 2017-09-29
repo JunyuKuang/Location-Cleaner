@@ -8,9 +8,9 @@ iOS 8.0+
 
 ## Related Project
 
-KrauseFx/detect.location
+[KrauseFx/detect.location](https://github.com/KrauseFx/detect.location)
+
 An easy way to access the user's iOS location data without actually having access.
-https://github.com/KrauseFx/detect.location
 
 ## License
 
