@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  PhotoLocationRemover
+
+  Created by Jonny on 9/28/17.
+  Copyright © 2017 Jonny. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "定位清洁器";
+"CFBundleName" = "定位清洁器";
+
+// For remove location tags.
+"NSPhotoLibraryUsageDescription" = "为了移除照片和视频上的定位标记。";

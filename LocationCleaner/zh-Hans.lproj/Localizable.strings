@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  PhotoLocationRemover
+
+  Created by Jonny on 9/28/17.
+  Copyright © 2017 Jonny. All rights reserved.
+*/
+
+"Open Settings" = "打开“设置”";
+"Remove Location Tags" = "移除定位标记";
+"Cannot access Photo Library" = "无法访问“照片图库”";
+"Loading photos and videos..." = "正在读取照片和视频……";
+"Found %i photos and videos have location tags" = "已找到 %i 张含有定位标记的照片和视频";
+"Found 1 photo or video has location tag" = "已找到 1 张含有定位标记的照片或视频";
+"No photo or video have location tag" = "没有含定位标记的照片或视频";
+"Removing location tags..." = "正在移除定位标记……";
+"Remove Location Tags for All of Your Photos and Videos" = "移除所有照片和视频的定位标记";
+"This will sync to all of your other iCloud Photo Library enabled devices and cannot be undone." = "此操作会同步到你的使用 iCloud 照片图库的其它设备，且无法撤销。";
+"Cancel" = "取消";
+"Remove Location Tags" = "移除定位标记";
+"Disable Camera's location service in \"Settings > Privacy > Location Services > Camera\" to prevent new photos and videos from tagging location" = "在“设置 > 隐私 > 定位服务 > 相机”中禁用相机的定位服务来避免新照片和视频被标记上定位信息";
