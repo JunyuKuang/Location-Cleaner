@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PhotosHelper.h"
+#import "UIColor+PointImage.h"
 
 @import Photos;
 
@@ -18,10 +19,11 @@ typedef NS_ENUM(NSInteger, ViewControllerState) {
     ViewControllerStateDeletingLocations
 };
 
-@interface ViewController ()
+@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 @property (weak, nonatomic) IBOutlet UIButton *commitButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButtonItem;
 
 @property (strong, nonatomic) NSArray *assets;
 @property (strong, nonatomic) PhotosHelper *photosHelper;
@@ -40,7 +42,7 @@ typedef NS_ENUM(NSInteger, ViewControllerState) {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.assets = @[];
     self.photosHelper = [[PhotosHelper alloc] init];
     self.state = ViewControllerStateLoadingAssets;
@@ -130,6 +132,12 @@ typedef NS_ENUM(NSInteger, ViewControllerState) {
         default:
             break;
     }
+    
+    self.commitButton.backgroundColor = nil;
+    
+    UIColor *buttonColor = self.commitButton.isEnabled ? UIColor.redColor : UIColor.lightGrayColor;
+    [self.commitButton setBackgroundImage:buttonColor.kjy_makePointImage
+                                 forState:UIControlStateNormal];
 }
 
 - (IBAction)tapCommitButton:(UIButton *)sender
@@ -190,6 +198,39 @@ typedef NS_ENUM(NSInteger, ViewControllerState) {
                                             }]];
 
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+#pragma mark - Share Photos Without Location Info
+
+- (IBAction)tapShareButtonItem:(UIBarButtonItem *)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    if (image == nil) {
+        image = info[UIImagePickerControllerOriginalImage];
+    }
+    
+    if (image != nil) {
+        UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[image] applicationActivities:nil];
+        controller.popoverPresentationController.barButtonItem = self.shareButtonItem;
+        [picker presentViewController:controller animated:YES completion:nil];
+    } else {
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end

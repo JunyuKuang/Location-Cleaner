@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB5ED67C1FA18DC40007C33C /* UIColor+PointImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5ED67B1FA18DC40007C33C /* UIColor+PointImage.m */; };
 		FB8BB91B1F7DFF2300B77A2E /* PhotosHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8BB91A1F7DFF2300B77A2E /* PhotosHelper.m */; };
-		FBB1504A1F7C9D1C008FF7DF /* CommitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB150491F7C9D1C008FF7DF /* CommitButton.m */; };
 		FBB1504E1F7C9EA6008FF7DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBB150501F7C9EA6008FF7DF /* Localizable.strings */; };
 		FBB150541F7CA6B5008FF7DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBB150561F7CA6B5008FF7DF /* InfoPlist.strings */; };
 		FBB78D2E1F7C88BF00DEDCAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB78D2D1F7C88BF00DEDCAE /* AppDelegate.m */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB5ED67A1FA18DC40007C33C /* UIColor+PointImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+PointImage.h"; sourceTree = "<group>"; };
+		FB5ED67B1FA18DC40007C33C /* UIColor+PointImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PointImage.m"; sourceTree = "<group>"; };
 		FB8BB9191F7DFF2300B77A2E /* PhotosHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosHelper.h; sourceTree = "<group>"; };
 		FB8BB91A1F7DFF2300B77A2E /* PhotosHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosHelper.m; sourceTree = "<group>"; };
-		FBB150481F7C9D1C008FF7DF /* CommitButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitButton.h; sourceTree = "<group>"; };
-		FBB150491F7C9D1C008FF7DF /* CommitButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitButton.m; sourceTree = "<group>"; };
 		FBB1504B1F7C9E22008FF7DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		FBB1504F1F7C9EA6008FF7DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBB150511F7C9EA7008FF7DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 				FBB78D301F7C88BF00DEDCAE /* ViewController.m */,
 				FB8BB9191F7DFF2300B77A2E /* PhotosHelper.h */,
 				FB8BB91A1F7DFF2300B77A2E /* PhotosHelper.m */,
-				FBB150481F7C9D1C008FF7DF /* CommitButton.h */,
-				FBB150491F7C9D1C008FF7DF /* CommitButton.m */,
+				FB5ED67A1FA18DC40007C33C /* UIColor+PointImage.h */,
+				FB5ED67B1FA18DC40007C33C /* UIColor+PointImage.m */,
 				FBB78D321F7C88BF00DEDCAE /* Main.storyboard */,
 				FBB78D351F7C88BF00DEDCAE /* Assets.xcassets */,
 				FBB150501F7C9EA6008FF7DF /* Localizable.strings */,
@@ -166,8 +166,8 @@
 			files = (
 				FBB78D311F7C88BF00DEDCAE /* ViewController.m in Sources */,
 				FBB78D3C1F7C88BF00DEDCAE /* main.m in Sources */,
-				FBB1504A1F7C9D1C008FF7DF /* CommitButton.m in Sources */,
 				FB8BB91B1F7DFF2300B77A2E /* PhotosHelper.m in Sources */,
+				FB5ED67C1FA18DC40007C33C /* UIColor+PointImage.m in Sources */,
 				FBB78D2E1F7C88BF00DEDCAE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
